@@ -28,9 +28,9 @@ public class Calculator {
         int y = 10;
         System.out.println(sum(y));
         System.out.println(minus(y));
-        Calculator Operations = new Calculator();
-        System.out.println(Operations.multiply(y));
-        System.out.println(Operations.divide(y));
-        System.out.println(Operations.sumAllOperation(y));
+        Calculator operations = new Calculator();
+        System.out.println(operations.multiply(y));
+        System.out.println(operations.divide(y));
+        System.out.println(operations.sumAllOperation(y));
     }
 }
