@@ -41,7 +41,7 @@ public class PointTest {
     }
 
     @Test
-    public void when4And3And2to2And6And4then() {
+    public void when4And3And2to2And6And4then4dot1() {
         Point a = new Point(4, 3, 2);
         Point b = new Point(2, 6, 4);
         double out = a.distance3d(b);
@@ -50,7 +50,7 @@ public class PointTest {
     }
 
     @Test
-    public void when2And3And2to2And6And4then() {
+    public void when2And3And2to2And6And4then3dot6() {
         Point a = new Point(2, 3, 2);
         Point b = new Point(2, 6, 4);
         double out = a.distance3d(b);
