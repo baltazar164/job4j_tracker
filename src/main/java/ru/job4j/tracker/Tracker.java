@@ -57,18 +57,18 @@ public class Tracker {
 
     public boolean replace(int id, Item bugWithDesc) {
         int index = indexOf(id);
-        if (index != -1) {
+        boolean rsl = index != -1;
+        if (rsl) {
             bugWithDesc.setId(id);
             items[index] = bugWithDesc;
-            return true;
-        } else {
-            return false;
         }
+        return rsl;
     }
 
     public boolean delete(int id) {
         int index = indexOf(id);
-        if (index != -1) {
+        boolean rsl = index != -1;
+        if (rsl) {
             if (index == size - 1) {
                 items[index] = null;
             } else {
@@ -77,9 +77,7 @@ public class Tracker {
                 items[size - 1] = null;
             }
             size--;
-            return true;
-        } else {
-            return false;
         }
+        return rsl;
     }
 }
