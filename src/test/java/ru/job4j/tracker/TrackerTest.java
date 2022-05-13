@@ -87,4 +87,18 @@ public class TrackerTest {
         tracker.delete(id);
         assertThat(tracker.findById(id), is(nullValue()));
     }
+
+    @Test
+    public void whenDelete100() {
+        Tracker tracker = new Tracker();
+        for (int i = 0; i < 100; i++) {
+            Item item = new Item();
+            item.setName(Integer.toString(i));
+            tracker.add(item);
+        }
+        Item[] items = tracker.findByName("99");
+        int id = items[0].getId();
+        tracker.delete(id);
+        assertThat(tracker.findById(id), is(nullValue()));
+    }
 }
