@@ -6,7 +6,7 @@ public class StartUI {
 
     public void init(Scanner scanner, Tracker tracker) {
         boolean run = true;
-        do {
+        while (run) {
             showMenu();
             System.out.print("Select: ");
             int select = Integer.parseInt(scanner.nextLine());
@@ -15,7 +15,7 @@ public class StartUI {
             } else {
                 run = false;
             }
-        } while (run);
+        }
     }
 
     private void showMenu() {
