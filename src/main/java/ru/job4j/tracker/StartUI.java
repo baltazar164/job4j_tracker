@@ -29,9 +29,9 @@ public class StartUI {
                 }
             } else if (select == 2) {
                 System.out.println("=== Edit item ===");
-                System.out.println("Ented id: ");
+                System.out.print("Ented id: ");
                 int id = Integer.parseInt(scanner.nextLine());
-                System.out.println("Ented name: ");
+                System.out.print("Ented name: ");
                 String name = scanner.nextLine();
                 Item item = new Item(name);
                 if (tracker.replace(id, item)) {
