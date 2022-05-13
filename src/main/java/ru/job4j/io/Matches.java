@@ -8,21 +8,22 @@ public class Matches {
         System.out.println("Игра 11.");
         boolean turn = true;
         int count = 11;
-        do {
+        while (count > 0) {
             String player = turn ? "Первый игрок" : "Второй игрок";
             System.out.println(player + " введите число от 1 до 3:");
             int matches = Integer.parseInt(input.nextLine());
-            turn = !turn;
-            count = count - matches;
-            if (count < 1) {
-                if (!turn) {
-                    System.out.println("Выиграл первый игрок");
-                } else {
-                    System.out.println("Выиграл второй игрок");
-                }
+            if (matches > 0 && matches < 4 && matches <= count) {
+                turn = !turn;
+                count = count - matches;
+                System.out.println("Осталось " + count + " спичек.");
+            } else {
+                System.out.println("Введено неверное число.");
             }
-            System.out.println("Осталось спичек: " + count);
-        } while (count > 0);
-
+        }
+        if (!turn) {
+            System.out.println("Выиграл первый игрок");
+        } else {
+            System.out.println("Выиграл второй игрок");
+        }
     }
 }
