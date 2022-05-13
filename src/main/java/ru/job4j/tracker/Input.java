@@ -1,7 +1,7 @@
 package ru.job4j.tracker;
 
 public interface Input {
-    String askStr(String msg);
+    String askStr(String question);
 
-    int askInt(String msg);
+    int askInt(String question);
 }
