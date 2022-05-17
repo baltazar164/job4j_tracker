@@ -134,6 +134,8 @@ public class TrackerTest {
         ValidateInput input = new ValidateInput(out, in);
         int selected = input.askInt("Enter menu:");
         Assert.assertThat(selected, is(1));
+        selected = input.askInt("Enter menu:");
+        Assert.assertThat(selected, is(2));
     }
 
     @Test
