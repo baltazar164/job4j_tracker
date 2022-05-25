@@ -3,11 +3,10 @@ package ru.job4j.tracker;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import static org.hamcrest.Matchers.is;
-import static org.junit.Assert.*;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ItemDescByNameTest {
 
@@ -21,7 +20,7 @@ public class ItemDescByNameTest {
         expected.add(new Item("Ted"));
         expected.add(new Item("Devid"));
         expected.add(new Item("Alex"));
-        Collections.sort(actual, new ItemDescByName());
+        actual.sort(new ItemDescByName());
         assertThat(expected, is(actual));
     }
 }
