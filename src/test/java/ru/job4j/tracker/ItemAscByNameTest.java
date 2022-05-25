@@ -4,7 +4,7 @@ import org.junit.Test;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 
 public class ItemAscByNameTest {
@@ -19,7 +19,7 @@ public class ItemAscByNameTest {
         expected.add(new Item("Alex"));
         expected.add(new Item("Devid"));
         expected.add(new Item("Ted"));
-        Collections.sort(actual, new ItemAscByName());
+        actual.sort(new ItemAscByName());
         assertThat(expected, is(actual));
     }
 }
