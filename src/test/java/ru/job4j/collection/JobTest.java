@@ -1,12 +1,32 @@
 package ru.job4j.collection;
 
 import org.junit.Test;
+
+import java.util.ArrayList;
 import java.util.Comparator;
-import static org.hamcrest.Matchers.greaterThan;
+import java.util.List;
+
 import static org.hamcrest.Matchers.lessThan;
-import static org.junit.Assert.assertThat;
+import static org.hamcrest.Matchers.greaterThan;
+import static org.hamcrest.Matchers.is;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class JobTest {
+    @Test
+    public void whenCompatorByAscNameAndDescPrority() {
+        List<Job> actual = new ArrayList<>();
+        actual.add(new Job("Ben", 1));
+        actual.add(new Job("Alex", 0));
+        actual.add(new Job("Alex", 1));
+        actual.add(new Job("Ben", 0));
+        List<Job> expected = new ArrayList<>();
+        expected.add(new Job("Alex", 1));
+        expected.add(new Job("Alex", 0));
+        expected.add(new Job("Ben", 1));
+        expected.add(new Job("Ben", 0));
+        actual.sort(new JobAscByName().thenComparing(new JobDescByPriority()));
+        assertThat(expected, is(actual));
+    }
 
     @Test
     public void whenCompatorByNameAndPrority() {
