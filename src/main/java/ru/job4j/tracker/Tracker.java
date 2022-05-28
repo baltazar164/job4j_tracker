@@ -35,13 +35,12 @@ public class Tracker {
     }
 
     private int indexOf(int id) {
-        int rsl = -1;
         for (int i = 0; i < items.size(); i++) {
             if (items.get(i).getId() == id) {
                 return i;
             }
         }
-        return rsl;
+        return -1;
     }
 
     public boolean replace(int id, Item item) {
