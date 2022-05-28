@@ -2,6 +2,9 @@ package ru.job4j.bank;
 
 import java.util.Objects;
 
+/**
+ * Хранит информацию о клиентах банка: паспорт и ФИО.
+ */
 public class User {
     private String passport;
     private String username;
