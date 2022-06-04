@@ -6,6 +6,7 @@ import java.util.ArrayList;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
 import static org.junit.Assert.assertTrue;
+import java.util.ArrayList;
 
 public class PhoneDictionaryTest {
     @Test
